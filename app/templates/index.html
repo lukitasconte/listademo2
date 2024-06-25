@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>LISTA DE TAREAS</h1>
+        <h2>Programación Avanzada</h2>
+        <div class="auth-container">
+            <div class="auth-box">
+                <a href="{{ url_for('main.register') }}" class="auth-button">Registrar</a>
+            </div>
+            <div class="divider"></div>
+            <div class="auth-box">
+                <a href="{{ url_for('main.login') }}" class="auth-button">Entrar</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 

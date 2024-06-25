@@ -134,3 +134,284 @@ button:hover {
     color: #00008b; /* Color azul oscuro */
     margin-bottom: 20px;
 }
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+/* Estilos para el recuadro blanco */
+.white-box {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde gris */
+    padding: 250px; /* Relleno interno */
+    margin-top: 20px; /* Margen superior */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial, sans-serif;
+    color: #00008b;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 25px;
+    font-family: Helvetica, sans-serif;
+    color: #00008b;
+    margin-bottom: 20px;
+}
+/* styles.css */
+
+/* Estilo para los nombres de los integrantes */
+.footer {
+    text-align: center;
+    font-size: 15px; /* Tamaño de fuente 15px */
+    font-family: Arial, sans-serif;
+    color: #00008b; /* Color azul oscuro */
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.footer span {
+    padding: 0 5px; /* Espacio entre los nombres */
+}
+
+
+/* Estilos para el recuadro blanco */
+.white-box {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde gris */
+    padding: 40px; /* Relleno interno */
+    margin-top: 20px; /* Margen superior */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    min-height: 40px; /* Altura mínima fija */
+}
+
+
+/* Estilos para el botón "Agregar Tarea" */
+.task-button {
+    text-decoration: none; /* Sin subrayado */
+    font-size: 18px; /* Tamaño de fuente */
+    color: #00008b; /* Color del texto azul oscuro */
+    padding: 10px 20px; /* Relleno interno */  
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco */
+    border: 2px solid #00008b; /* Borde azul oscuro */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transición suave */
+    margin-top: 20px; /* Espacio superior */
+    display: inline-block; /* Botón en línea */
+}
+
+
+/* Efecto hover para el botón "Agregar Tarea" */
+.task-button:hover {
+    background-color: #00008b; /* Fondo azul oscuro */
+    color: #ffffff; /* Texto blanco */
+    border-color: #ffffff; /* Borde blanco */
+}
+
+
+
+/* Estilos para el formulario de tarea */
+#taskForm {
+    background-color: #e2e8ff; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde gris */
+    padding: 20px; /* Relleno interno */
+    margin-top: 20px; /* Margen superior */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Centrar texto */
+}
+
+/* Estilos para los campos del formulario */
+#taskForm input[type="text"],
+#taskForm textarea {
+    width: 95%; /* Ancho completo */
+    padding: 10px; /* Relleno interno */
+    margin-bottom: 15px; /* Espacio debajo */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Estilo específico para el textarea */
+#taskForm textarea {
+    resize: none; /* Deshabilitar la redimensión por parte del usuario */
+}
+
+/* Estilos para el botón del formulario */
+#taskForm button {
+    width: 100%; /* Ancho completo */
+    padding: 30px; /* Relleno interno */
+    background-color: #00008b; /* Fondo azul oscuro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Puntero en forma de mano */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+/* Efecto hover para el botón del formulario */
+#taskForm button:hover {
+    background-color: #4169e1; /* Fondo azul más claro */
+}
+
+/* Estilos para el botón de alternar formulario */
+#toggleFormButton {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Relleno interno */
+    background-color: #00008b; /* Fondo azul oscuro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Puntero en forma de mano */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+/* Efecto hover para el botón de alternar formulario */
+#toggleFormButton:hover {
+    background-color: #4169e1; /* Fondo azul más claro */
+}
+
+/* Estilos para el recuadro blanco */
+.white-box {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde gris */
+    padding: 40px; /* Relleno interno */
+    margin-top: 20px; /* Margen superior */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilos para los recuadros de tareas */
+.task-card {
+    background-color: #f9f9f9; /* Fondo personalizable */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Relleno interno */
+    margin: 10px; /* Espaciado entre tarjetas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: inline-block; /* Para que se alineen uno al lado del otro */
+    vertical-align: top; /* Alinear verticalmente en la parte superior */
+}
+
+/* Estilos para el contenedor de las tarjetas de tareas */
+.task-container {
+    display: flex; /* Usar flexbox para el diseño */
+    flex-wrap: wrap; /* Permitir que las tarjetas se ajusten a la siguiente línea */
+    justify-content: flex-start; /* Alinear las tarjetas al inicio */
+}
+
+
+.task-card {
+    /* Estilos comunes */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    vertical-align: top;
+}
+
+.task-card.red {
+    background-color: #ffcccc; /* Rojo */
+}
+
+.task-card.blue {
+    background-color: #cce6ff; /* Azul */
+}
+
+.task-card.yellow {
+    background-color: #ffffcc; /* Amarillo */
+}
+
+.task-card.purple {
+    background-color: #e6ccff; /* Violeta */
+}
+
+.task-card.green {
+    background-color: #ccffcc; /* Verde */
+}
+
+.color-selector-button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.color-options {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: -30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.color-options.show {
+    display: block;
+}
+
+.color-option {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.red {
+    background-color: #ffcccc; /* Rojo */
+}
+
+.blue {
+    background-color: #cce6ff; /* Azul */
+}
+
+.yellow {
+    background-color: #ffffcc; /* Amarillo */
+}
+
+.purple {
+    background-color: #e6ccff; /* Violeta */
+}
+
+.green {
+    background-color: #ccffcc; /* Verde */
+}
+
+.task-actions {
+    display: flex; /* Usamos flexbox para alinear los emojis en una línea */
+}
+
+.task-actions > div {
+    margin-right: 10px; /* Espacio entre los emojis */
+    cursor: pointer; /* Cambiamos el cursor al pasar sobre los emojis */
+}
+
+/* Estilo para oscurecer la tarea cuando está completada */
+.task-card.done {
+    background-color: #f2f2f2; /* Color de fondo gris claro */
+    opacity: 0.6; /* Opacidad reducida */
+    filter: grayscale(100%); /* Ejemplo de filtro (en este caso escala de grises) */
+}

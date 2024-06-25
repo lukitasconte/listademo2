@@ -104,7 +104,7 @@ label {
 
 /* Campos de entrada del formulario */
 input {
-    width: 100%; /* Ancho completo */
+    width: 90%; /* Ancho completo */
     padding: 10px; /* Relleno interno */
     margin-bottom: 15px; /* Espacio debajo */
     border: 1px solid #ccc; /* Borde gris */
@@ -114,7 +114,7 @@ input {
 
 /* Botones del formulario */
 button {
-    width: 100%; /* Ancho completo */
+    width: 96%; /* Ancho completo */
     padding: 10px; /* Relleno interno */
     background-color: #00008b; /* Fondo azul oscuro */
     color: white; /* Texto blanco */
@@ -134,4 +134,3 @@ button:hover {
     color: #00008b; /* Color azul oscuro */
     margin-bottom: 20px;
 }
-

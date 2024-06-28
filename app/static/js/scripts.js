@@ -159,3 +159,28 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 });
 
+function updateClock() {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    // Formatear los números para que tengan dos dígitos
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    var timeString = hours + ':' + minutes + ':' + seconds;
+    document.getElementById('time').textContent = timeString;
+
+    // Opcional: mostrar la fecha
+    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    var dateString = now.toLocaleDateString(undefined, options);
+    document.getElementById('date').textContent = dateString;
+}
+
+// Actualizar el reloj cada segundo
+setInterval(updateClock, 1000);
+
+// Llamar a la función inmediatamente para mostrar el reloj al cargar la página
+updateClock();

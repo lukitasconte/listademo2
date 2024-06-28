@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTA DE TAREAS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>LISTA DE TAREAS</h1>
+        <h2>Programación Avanzada</h2>
+
+    <div id="clock">
+        <div id="time"></div>
+        <div id="date"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+        <!-- Recuadro en blanco -->
+        <div class="white-box">
+            <!-- Botón para agregar tarea -->
+            <button id="toggleFormButton" class="task-button">+</button>
+            
+            <!-- Historial de Tareas -->
+            <div id="taskHistory">
+                <h3>Historial de Tareas:</h3>
+                <div id="taskContainer" class="task-container"></div>
+            </div>
+
+            <!-- Formulario para agregar tarea -->
+            <form id="taskForm" style="display: none;">
+                <label for="taskTitle">Título de la Tarea</label>
+                <input type="text" id="taskTitle" name="taskTitle" required>
+                
+                <label for="taskDescription">Descripción</label>
+                <textarea id="taskDescription" name="taskDescription" required style="resize: none;"></textarea>
+                
+                <button type="submit">Guardar Tarea</button>
+            </form>      
+        </div>
+    </div>
+</body>
+</html>

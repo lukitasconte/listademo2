@@ -415,3 +415,39 @@ h2 {
     opacity: 0.6; /* Opacidad reducida */
     filter: grayscale(100%); /* Ejemplo de filtro (en este caso escala de grises) */
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+#clock {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#time {
+    font-size: 48px;
+    color: #00008b;
+    font-weight: 900; /* Extra bold */
+    font-family: 'Roboto', sans-serif; /* Fuente de Google */
+}
+
+#date {
+    font-size: 24px;
+    color: #555;
+    font-weight: 900; /* Extra bold */
+    font-family: 'Roboto', sans-serif; /* Fuente de Google */
+}

@@ -12,7 +12,7 @@ BUGS:
 
 6. Cuando cambiamos a idioma “Inglés” se cambia todo menos la fecha.
 
-7. ERROR de VENV, Entorno Virtual (que le pasaba a la compañera Luana):
+7. ERROR de VENV, Entorno Virtual (que le pasaba a una compañera del proyecto, desconocemos el motivo pero pudimos solucionarlo):
    
   * Borrar carpeta del entorno virtual (venv), y crearla de 0
   * En cmd escribir cd ruta/al/directorio/de/tu/proyecto

@@ -1,322 +1,163 @@
 /* Estilos generales del cuerpo */
 body {
-    font-family: Arial, sans-serif; /* Fuente para todo el cuerpo */
+    font-family: Arial, sans-serif;
     background-color: #f0f8ff; /* Color de fondo azul claro */
-    display: flex; /* Usar flexbox para alinear el contenido */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    height: 100vh; /* Altura completa de la ventana */
-    margin: 0; /* Sin margen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 /* Contenedor principal */
-.container {
-    display: flex;
-    flex-direction: column; /* Disposición vertical */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    width: 100%;
-    height: 100%;
-}
-
-/* Título principal */
-h1 {
-    text-align: center;
-    font-size: 40px; /* Tamaño de fuente grande */
-    font-family: Arial, sans-serif;
-    color: #00008b; /* Color azul oscuro */
-    margin-bottom: 10px;
-}
-
-/* Subtítulo */
-h2 {
-    text-align: center;
-    font-size: 25px; /* Tamaño de fuente medio */
-    font-family: Helvetica, sans-serif;
-    color: #00008b; /* Color azul oscuro */
-    margin-bottom: 20px;
-}
-
-/* Contenedor para los recuadros de autenticación */
-.auth-container {
-    display: flex;
-    align-items: center; /* Centrar verticalmente */
-    justify-content: center; /* Centrar horizontalmente */
-    width: 100%;
-    max-width: 800px; /* Ancho máximo del contenedor */
-}
-
-/* Estilo para los recuadros de autenticación */
-.auth-box {
-    flex: 1; /* Ocupa igual espacio */
-    display: flex;
-    justify-content: center; /* Centrar contenido horizontalmente */
-    align-items: center; /* Centrar contenido verticalmente */
-    border: 2px solid #00008b; /* Borde azul oscuro */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px; /* Relleno interno */
-    margin: 40px; /* Margen entre los recuadros */
-    background-color: #ffffff; /* Fondo blanco */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-}
-
-/* Estilo para los botones de autenticación */
-.auth-button {
-    text-decoration: none; /* Sin subrayado */
-    font-size: 40px; /* Tamaño de fuente */
-    color: #00008b; /* Color del texto azul oscuro */
-    padding: 10px 20px; /* Relleno interno */   
-    border-radius: 5px; /* Bordes redondeados */
-    background-color: #ffffff; /* Fondo blanco */
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
-}
-
-/* Efecto hover para los botones */
-.auth-button:hover {
-    background-color: #00008b; /* Fondo azul oscuro */
-    color: #ffffff; /* Texto blanco */
-}
-
-/* Línea divisoria */
-.divider {
-    width: 2px; /* Ancho de la línea */
-    height: 100px; /* Altura de la línea */
-    background-color: #00008b; /* Color de la línea */
-    margin: 0 10px; /* Espacio alrededor de la línea */
-}
-
-/* Contenedor del formulario */
-.form-container {
-    background-color: #ffffff; /* Fondo blanco */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px; /* Relleno interno */
-    width: 400px; /* Ancho del contenedor */
-    text-align: center; /* Centrar texto */
-}
-
-/* Etiquetas del formulario */
-label {
-    display: block; /* Bloque completo */
-    margin-bottom: 5px; /* Espacio debajo */
-    color: #00008b; /* Color del texto */
-}
-
-/* Campos de entrada del formulario */
-input {
-    width: 90%; /* Ancho completo */
-    padding: 10px; /* Relleno interno */
-    margin-bottom: 15px; /* Espacio debajo */
-    border: 1px solid #ccc; /* Borde gris */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 14px; /* Tamaño de fuente */
-}
-
-/* Botones del formulario */
-button {
-    width: 96%; /* Ancho completo */
-    padding: 10px; /* Relleno interno */
-    background-color: #00008b; /* Fondo azul oscuro */
-    color: white; /* Texto blanco */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Puntero en forma de mano */
-    font-size: 16px; /* Tamaño de fuente */
-}
-
-/* Efecto hover para los botones del formulario */
-button:hover {
-    background-color: #4169e1; /* Fondo azul más claro */
-}
-
-/* Estilo para los títulos dentro de los formularios de autenticación */
-.form-container h1 {
-    color: #00008b; /* Color azul oscuro */
-    margin-bottom: 20px;
-}
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
-}
-/* Estilos para el recuadro blanco */
-.white-box {
-    background-color: #ffffff; /* Fondo blanco */
-    border: 1px solid #ccc; /* Borde gris */
-    padding: 250px; /* Relleno interno */
-    margin-top: 20px; /* Margen superior */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    height: 100%;
+    text-align: center;
+    padding: 50px;
 }
 
-
+/* Títulos */
 h1 {
     text-align: center;
     font-size: 40px;
-    font-family: Arial, sans-serif;
-    color: #00008b;
+    color: #00008b; /* Azul oscuro */
     margin-bottom: 10px;
 }
 
 h2 {
     text-align: center;
     font-size: 25px;
-    font-family: Helvetica, sans-serif;
     color: #00008b;
     margin-bottom: 20px;
 }
-/* styles.css */
 
-/* Estilo para los nombres de los integrantes */
-.footer {
-    text-align: center;
-    font-size: 15px; /* Tamaño de fuente 15px */
-    font-family: Arial, sans-serif;
-    color: #00008b; /* Color azul oscuro */
-    position: absolute;
-    bottom: 10px;
+/* Contenedor para los recuadros de autenticación */
+.auth-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    max-width: 800px;
 }
 
-.footer span {
-    padding: 0 5px; /* Espacio entre los nombres */
+/* Estilo para los recuadros de autenticación */
+.auth-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #00008b;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Estilos para el recuadro blanco */
-.white-box {
-    background-color: #ffffff; /* Fondo blanco */
-    border: 1px solid #ccc; /* Borde gris */
-    padding: 40px; /* Relleno interno */
-    margin-top: 20px; /* Margen superior */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    min-height: 40px; /* Altura mínima fija */
+/* Estilo para los botones de autenticación */
+.auth-button {
+    text-decoration: none;
+    font-size: 40px;
+    color: #00008b;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-
-/* Estilos para el botón "Agregar Tarea" */
-.task-button {
-    text-decoration: none; /* Sin subrayado */
-    font-size: 18px; /* Tamaño de fuente */
-    color: #00008b; /* Color del texto azul oscuro */
-    padding: 10px 20px; /* Relleno interno */  
-    border-radius: 5px; /* Bordes redondeados */
-    background-color: #ffffff; /* Fondo blanco */
-    border: 2px solid #00008b; /* Borde azul oscuro */
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transición suave */
-    margin-top: 20px; /* Espacio superior */
-    display: inline-block; /* Botón en línea */
+.auth-button:hover {
+    background-color: #00008b;
+    color: #ffffff;
 }
 
-
-/* Efecto hover para el botón "Agregar Tarea" */
-.task-button:hover {
-    background-color: #00008b; /* Fondo azul oscuro */
-    color: #ffffff; /* Texto blanco */
-    border-color: #ffffff; /* Borde blanco */
+/* Línea divisoria */
+.divider {
+    width: 2px;
+    height: 100px;
+    background-color: #00008b;
+    margin: 0 10px;
 }
 
-
-
-/* Estilos para el formulario de tarea */
-#taskForm {
-    background-color: #e2e8ff; /* Fondo blanco */
-    border: 1px solid #ccc; /* Borde gris */
-    padding: 20px; /* Relleno interno */
-    margin-top: 20px; /* Margen superior */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    text-align: center; /* Centrar texto */
+/* Contenedor del formulario */
+.form-container {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
 }
 
-/* Estilos para los campos del formulario */
-#taskForm input[type="text"],
-#taskForm textarea {
-    width: 95%; /* Ancho completo */
-    padding: 10px; /* Relleno interno */
-    margin-bottom: 15px; /* Espacio debajo */
-    border: 1px solid #ccc; /* Borde gris */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 14px; /* Tamaño de fuente */
+/* Etiquetas del formulario */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #00008b;
 }
 
-/* Estilo específico para el textarea */
-#taskForm textarea {
-    resize: none; /* Deshabilitar la redimensión por parte del usuario */
+/* Campos de entrada del formulario */
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
 }
 
-/* Estilos para el botón del formulario */
-#taskForm button {
-    width: 100%; /* Ancho completo */
-    padding: 30px; /* Relleno interno */
-    background-color: #00008b; /* Fondo azul oscuro */
-    color: white; /* Texto blanco */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Puntero en forma de mano */
-    font-size: 16px; /* Tamaño de fuente */
-    transition: background-color 0.3s; /* Transición suave */
+/* Botones del formulario */
+button {
+    width: 96%;
+    padding: 10px;
+    background-color: #00008b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-/* Efecto hover para el botón del formulario */
-#taskForm button:hover {
-    background-color: #4169e1; /* Fondo azul más claro */
+button:hover {
+    background-color: #4169e1;
 }
 
-/* Estilos para el botón de alternar formulario */
+/* Estilo para el botón de alternar formulario */
 #toggleFormButton {
-    width: 100%; /* Ancho completo */
-    padding: 10px; /* Relleno interno */
-    background-color: #00008b; /* Fondo azul oscuro */
-    color: white; /* Texto blanco */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Puntero en forma de mano */
-    font-size: 16px; /* Tamaño de fuente */
-    transition: background-color 0.3s; /* Transición suave */
+    width: 100%;
+    padding: 10px;
+    background-color: #00008b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-/* Efecto hover para el botón de alternar formulario */
 #toggleFormButton:hover {
-    background-color: #4169e1; /* Fondo azul más claro */
+    background-color: #4169e1;
 }
 
 /* Estilos para el recuadro blanco */
 .white-box {
-    background-color: #ffffff; /* Fondo blanco */
-    border: 1px solid #ccc; /* Borde gris */
-    padding: 40px; /* Relleno interno */
-    margin-top: 20px; /* Margen superior */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para los recuadros de tareas */
 .task-card {
-    background-color: #f9f9f9; /* Fondo personalizable */
-    border: 1px solid #ddd; /* Borde gris claro */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px; /* Relleno interno */
-    margin: 10px; /* Espaciado entre tarjetas */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    display: inline-block; /* Para que se alineen uno al lado del otro */
-    vertical-align: top; /* Alinear verticalmente en la parte superior */
-}
-
-/* Estilos para el contenedor de las tarjetas de tareas */
-.task-container {
-    display: flex; /* Usar flexbox para el diseño */
-    flex-wrap: wrap; /* Permitir que las tarjetas se ajusten a la siguiente línea */
-    justify-content: flex-start; /* Alinear las tarjetas al inicio */
-}
-
-
-.task-card {
-    /* Estilos comunes */
+    background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
@@ -326,108 +167,39 @@ h2 {
     vertical-align: top;
 }
 
-.task-card.red {
-    background-color: #ffcccc; /* Rojo */
-}
-
-.task-card.blue {
-    background-color: #cce6ff; /* Azul */
-}
-
-.task-card.yellow {
-    background-color: #ffffcc; /* Amarillo */
-}
-
-.task-card.purple {
-    background-color: #e6ccff; /* Violeta */
-}
-
-.task-card.green {
-    background-color: #ccffcc; /* Verde */
-}
-
-.color-selector-button {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #000;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-}
-
-.color-options {
-    display: none;
-    position: absolute;
-    top: 50px;
-    left: -30px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.color-options.show {
-    display: block;
-}
-
-.color-option {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin: 5px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.red {
-    background-color: #ffcccc; /* Rojo */
-}
-
-.blue {
-    background-color: #cce6ff; /* Azul */
-}
-
-.yellow {
-    background-color: #ffffcc; /* Amarillo */
-}
-
-.purple {
-    background-color: #e6ccff; /* Violeta */
-}
-
-.green {
-    background-color: #ccffcc; /* Verde */
-}
+.task-card.red { background-color: #ffcccc; }
+.task-card.blue { background-color: #cce6ff; }
+.task-card.yellow { background-color: #ffffcc; }
+.task-card.purple { background-color: #e6ccff; }
+.task-card.green { background-color: #ccffcc; }
 
 .task-actions {
-    display: flex; /* Usamos flexbox para alinear los emojis en una línea */
+    display: flex;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
-.task-actions > div {
-    margin-right: 10px; /* Espacio entre los emojis */
-    cursor: pointer; /* Cambiamos el cursor al pasar sobre los emojis */
-}
-
-/* Estilo para oscurecer la tarea cuando está completada */
 .task-card.done {
-    background-color: #f2f2f2; /* Color de fondo gris claro */
-    opacity: 0.6; /* Opacidad reducida */
-    filter: grayscale(100%); /* Ejemplo de filtro (en este caso escala de grises) */
+    background-color: #f2f2f2;
+    opacity: 0.6;
+    filter: grayscale(100%);
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
+/* Estilo para el footer */
+.footer {
     text-align: center;
-    padding: 50px;
+    font-size: 15px;
+    color: #00008b;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
 }
 
+.footer span {
+    padding: 0 5px;
+}
+
+/* Estilos para el reloj */
 #clock {
     position: fixed;
     top: 50%;
@@ -441,13 +213,193 @@ body {
 #time {
     font-size: 48px;
     color: #00008b;
-    font-weight: 900; /* Extra bold */
-    font-family: 'Roboto', sans-serif; /* Fuente de Google */
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
 }
 
 #date {
     font-size: 24px;
     color: #555;
-    font-weight: 900; /* Extra bold */
-    font-family: 'Roboto', sans-serif; /* Fuente de Google */
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
 }
+
+/* Tema oscuro */
+.dark-theme {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --primary-color: #3b007f;
+    --secondary-color: #4d3dff;
+    --border-color: #272727;
+    --box-shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme .footer,
+.dark-theme label,
+.dark-theme #time {
+    color: var(--text-color);
+}
+
+.dark-theme .auth-box,
+.dark-theme .form-container,
+.dark-theme .white-box,
+.dark-theme #taskForm,
+.dark-theme .task-card {
+    background-color: var(--background-color);
+}
+
+.dark-theme .auth-button,
+.dark-theme .task-button,
+.dark-theme button,
+.dark-theme #toggleFormButton,
+.dark-theme #taskForm button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+}
+
+.dark-theme .auth-button:hover,
+.dark-theme .task-button:hover,
+.dark-theme button:hover,
+.dark-theme #toggleFormButton:hover,
+.dark-theme #taskForm button:hover {
+    background-color: var(--secondary-color);
+    color: #ccc;
+}
+
+.dark-theme .home-link {
+    position: absolute;
+    text-decoration: none;
+    top: 0px;
+    left: 30px;
+    font-size: 40px;
+    color: #ffffff; /* Ajusta el color del ícono según tu diseño */
+}
+
+
+.dark-theme .divider {
+    background-color: var(--text-color);
+}
+
+.dark-theme .task-card.done {
+    background-color: #1e1e1e;
+    opacity: 0.7;
+    filter: grayscale(100%);
+}
+
+.dark-theme .color-option.red { background-color: #ff6b6b; }
+.dark-theme .color-option.blue { background-color: #5cacee; }
+.dark-theme .color-option.yellow { background-color: #fff176; }
+.dark-theme .color-option.purple { background-color: #c085f1; }
+.dark-theme .color-option.green { background-color: #66bb6a; }
+
+.theme-switcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-switcher label {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switcher input[type="checkbox"] {
+    appearance: none;
+    width: 40px; /* Ancho del interruptor */
+    height: 20px; /* Alto del interruptor */
+    background-color: var(--border-color);
+    border-radius: 10px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Ajusta la posición vertical del interruptor */
+}
+
+
+.theme-switcher input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+}
+
+.theme-switcher input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.theme-switcher input[type="checkbox"]:checked::before {
+    transform: translateX(20px);
+}
+.theme-switcher input[type="checkbox"]:not(:checked)::before {
+    background-color: #000; /* Color negro para el tema claro */
+}
+
+
+
+
+.language-switcher {
+    position: absolute;
+    top: 60px; /* Ajusta según sea necesario para el espacio debajo del tema switcher */
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #00008b; /* Color de texto para el selector de idioma */
+    font-size: 16px;
+}
+
+.language-switcher label {
+    display: flex;
+    align-items: center;
+}
+
+.language-switcher select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Ajusta cualquier otro estilo necesario para el selector de idioma */
+
+.theme-switcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color); /* Ajusta según tu tema */
+    font-size: 16px;
+    z-index: 100; /* Asegura que esté encima del selector de idioma si es necesario */
+}
+
+.home-link {
+    position: absolute;
+    text-decoration: none;
+    top: 0px;
+    left: 30px;
+    font-size: 40px;
+    color: #00008b; /* Ajusta el color del ícono según tu diseño */
+}
+
+

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
+    <a href="{{ url_for('main.index') }}" class="home-link"><h1 data-text-es="🏠Inicio" data-text-en="🏠Home">🏠Inicio</h1></a>
+
     <div class="form-container">
         <h1>Registrar</h1>
         <form method="POST" action="{{ url_for('main.register') }}">
@@ -19,12 +21,9 @@
             <button type="submit">Registrar</button>
         </form>
     </div>
-        </div>
 
-    <!-- Contenido principal -->
-
-    <!-- Nombres de los integrantes -->
     <div class="footer">
+        <span>Comision 1: </span>
         <span>Borges Luana</span>
         <span>·</span>
         <span>Lopez Nazareno</span>

@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LISTA DE TAREAS</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        .bottom-right-container {
+            position: fixed;
+            bottom: 150px;
+            right: 25px;
+            text-align: right;
+            font-size: 20px;
+            color: #215086;
+        }
+
+        .unabimagen {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            text-align: right;
+        }
+
+
+        .bottom-right-container img {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -20,12 +43,10 @@
             </div>
         </div>
     </div>
+    
         </div>
-
-    <!-- Contenido principal -->
-
-    <!-- Nombres de los integrantes -->
     <div class="footer">
+        <span>Comision 1: </span>
         <span>Borges Luana</span>
         <span>·</span>
         <span>Lopez Nazareno</span>
@@ -34,5 +55,12 @@
         <span>·</span>
         <span>Conte Lucas</span>
     </div>
+    <div class="bottom-right-container">
+        <div style="font-weight: bold;">
+            Tecnicatura en Programación<br>
+            10-06-2024<br>
+            Profesor: Felipe Morales
+        </div>
+    <img class="unabimagen" src="{{ url_for('static', filename='images/Unab.png') }}" alt="Imagen" class="bottom-right">
 </body>
 </html>

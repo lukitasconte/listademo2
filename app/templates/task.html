@@ -8,38 +8,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>LISTA DE TAREAS</h1>
-        <h2>Programación Avanzada</h2>
-        
-    <div id="clock">
-        <div id="time"></div>
-        <div id="date"></div>
-    </div>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <a href="{{ url_for('main.index') }}" class="home-link"><h1 data-text-es="🏠Inicio" data-text-en="🏠Home">🏠Inicio</h1></a>
 
-        <!-- Recuadro en blanco -->
+    <div class="container">
+        <h1 data-text-es="LISTA DE TAREAS" data-text-en="TO DO LIST">LISTA DE TAREAS</h1>
+        <h2 data-text-es="Programación Avanzada" data-text-en="Advanced Programation">Programación Avanzada</h2>
+        
+        <div id="clock">
+            <div id="time"></div>
+            <div id="date"></div>
+        </div>
+
         <div class="white-box">
-            <!-- Botón para agregar tarea -->
             <button id="toggleFormButton" class="task-button">+</button>
             
-            <!-- Historial de Tareas -->
             <div id="taskHistory">
-                <h3>Historial de Tareas:</h3>
+                <h3 data-text-es="Historial de Tareas:" data-text-en="Task History:">Historial de Tareas:</h3>
                 <div id="taskContainer" class="task-container"></div>
             </div>
 
-            <!-- Formulario para agregar tarea -->
             <form id="taskForm" style="display: none;">
-                <label for="taskTitle">Título de la Tarea</label>
+                <label for="taskTitle" data-text-es="Título de la Tarea" data-text-en="Task Title">Título de la Tarea</label>
                 <input type="text" id="taskTitle" name="taskTitle" required>
                 
-                <label for="taskDescription">Descripción</label>
+                <label for="taskDescription" data-text-es="Descripción" data-text-en="Task Description">Descripción</label>
                 <textarea id="taskDescription" name="taskDescription" required style="resize: none;"></textarea>
                 
-                <button type="submit">Guardar Tarea</button>
-            </form>      
+                <button type="submit" data-text-es="Guardar Tarea" data-text-en="Save Task">Guardar Tarea</button>
+            </form>
+            
+            <div class="theme-switcher">
+                <label>
+                    🌞
+                    <input type="checkbox" id="toggleThemeSwitch">
+                    <span class="slider"></span>
+                    🌙
+                </label>
+            </div>
+
+            <div class="language-switcher">
+                <label for="languageSelect" data-text-es="Idioma:" data-text-en="Language:">Idioma:</label>
+                <select id="languageSelect">
+                    <option value="es">Español</option>
+                    <option value="en">Inglés</option>
+                </select>
+            </div>           
         </div>
     </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

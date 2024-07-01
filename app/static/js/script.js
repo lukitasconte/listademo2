@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const taskManager = new TaskManager();
+    const themeManager = new ThemeManager();
+    const languageManager = new LanguageManager();
+
     const button = document.getElementById('toggleFormButton');
     const form = document.getElementById('taskForm');
     const history = document.getElementById('taskHistory');
@@ -37,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             form.reset();
         } else {
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            const taskCard = createTaskCard(title, description, randomColor);
+            const taskCard = taskManager.createTaskCard(title, description, randomColor);
             
             taskContainer.appendChild(taskCard);
             form.reset();
@@ -54,7 +58,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    function createTaskCard(title, description, color) {
+    taskManager.loadTasks();
+
+    window.editTask = function(editButton) {
+        taskManager.editTask(editButton);
+    };
+
+    window.markTaskDone = function(doneButton) {
+        taskManager.markTaskDone(doneButton);
+    };
+
+    window.confirmDeleteTask = function(deleteButton) {
+        taskManager.confirmDeleteTask(deleteButton);
+    };
+
+    window.changeCursor = function(element) {
+        element.style.cursor = 'pointer';
+    };
+});
+
+class TaskManager {
+    constructor() {
+        this.colors = ['red', 'blue', 'yellow', 'purple', 'green'];
+        this.taskContainer = document.getElementById('taskContainer');
+    }
+
+    createTaskCard(title, description, color) {
         const taskCard = document.createElement('div');
         taskCard.className = `task-card ${color}`;
         taskCard.innerHTML = `
@@ -73,17 +102,17 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
 
-        const colorSelector = createColorSelector(taskCard);
+        const colorSelector = this.createColorSelector(taskCard);
         taskCard.appendChild(colorSelector);
 
         return taskCard;
     }
 
-    function createColorSelector(taskCard) {
+    createColorSelector(taskCard) {
         const colorOptions = document.createElement('div');
         colorOptions.className = 'color-options';
 
-        colors.forEach(color => {
+        this.colors.forEach(color => {
             const colorOption = document.createElement('div');
             colorOption.className = `color-option ${color}`;
             colorOption.addEventListener('click', function(event) {
@@ -96,7 +125,21 @@ document.addEventListener('DOMContentLoaded', function() {
         return colorOptions;
     }
 
-    window.editTask = function(editButton) {
+    loadTasks() {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        tasks.forEach(task => {
+            const taskCard = this.createTaskCard(task.title, task.description, task.color);
+            this.taskContainer.appendChild(taskCard);
+        });
+    }
+
+    saveTask(title, description, color) {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        tasks.push({ title, description, color });
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+
+    editTask(editButton) {
         const taskCard = editButton.parentNode.parentNode;
         const titleElement = taskCard.querySelector('h4');
         const descriptionElement = taskCard.querySelector('p');
@@ -111,24 +154,71 @@ document.addEventListener('DOMContentLoaded', function() {
         taskCard.classList.add('editing');
         form.dataset.mode = 'edit';
         form.querySelector('button[type="submit"]').textContent = 'Guardar Cambios';
-    };
+    }
 
-    window.markTaskDone = function(doneButton) {
+    markTaskDone(doneButton) {
         const taskCard = doneButton.parentNode.parentNode;
         taskCard.classList.toggle('done');
-    };
+    }
 
-    window.confirmDeleteTask = function(deleteButton) {
+    confirmDeleteTask(deleteButton) {
         if (confirm('¿Desea eliminar esta tarea?')) {
             const taskCard = deleteButton.parentNode.parentNode;
             taskCard.remove();
         }
-    };
+    }
+}
 
-    window.changeCursor = function(element) {
-        element.style.cursor = 'pointer';
-    };
-});
+class ThemeManager {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        const themeSwitch = document.getElementById('toggleThemeSwitch');
+        themeSwitch.addEventListener('change', () => {
+            document.body.classList.toggle('dark-theme', themeSwitch.checked);
+            localStorage.setItem('theme', themeSwitch.checked ? 'dark' : 'light');
+        });
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeSwitch.checked = true;
+        }
+    }
+}
+
+class LanguageManager {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        const languageSelect = document.getElementById('languageSelect');
+        languageSelect.addEventListener('change', () => {
+            const selectedLanguage = languageSelect.value;
+            this.changeLanguage(selectedLanguage);
+            localStorage.setItem('selectedLanguage', selectedLanguage);
+        });
+
+        const savedLanguage = localStorage.getItem('selectedLanguage');
+        if (savedLanguage) {
+            languageSelect.value = savedLanguage;
+            this.changeLanguage(savedLanguage);
+        }
+    }
+
+    changeLanguage(language) {
+        const elements = document.querySelectorAll('[data-text-es], [data-text-en]');
+        elements.forEach(element => {
+            const textKey = element.getAttribute(`data-text-${language}`);
+            if (textKey) {
+                element.textContent = textKey;
+            }
+        });
+    }
+}
 
 function updateClock() {
     var now = new Date();
@@ -150,41 +240,3 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 updateClock();
-
-document.addEventListener('DOMContentLoaded', () => {
-    const themeSwitch = document.getElementById('toggleThemeSwitch');
-    const languageSelect = document.getElementById('languageSelect');
-
-    themeSwitch.addEventListener('change', () => {
-        document.body.classList.toggle('dark-theme', themeSwitch.checked);
-        localStorage.setItem('theme', themeSwitch.checked ? 'dark' : 'light');
-    });
-
-    languageSelect.addEventListener('change', () => {
-        const selectedLanguage = languageSelect.value;
-        changeLanguage(selectedLanguage);
-        localStorage.setItem('selectedLanguage', selectedLanguage);
-    });
-
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark-theme');
-        themeSwitch.checked = true;
-    }
-
-    const savedLanguage = localStorage.getItem('selectedLanguage');
-    if (savedLanguage) {
-        languageSelect.value = savedLanguage;
-        changeLanguage(savedLanguage);
-    }
-
-    function changeLanguage(language) {
-        const elements = document.querySelectorAll('[data-text-es], [data-text-en]');
-        elements.forEach(element => {
-            const textKey = element.getAttribute(`data-text-${language}`);
-            if (textKey) {
-                element.textContent = textKey;
-            }
-        });
-    }
-});
